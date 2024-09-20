@@ -3,22 +3,32 @@
 @tailwind utilities;
 
 body{
-    background:#f6f3f0;
 }
 
+.leading-based{
+  line-height: 1.2;
+}
 @font-face {
   font-family: 'PPMori';
-  src: url('/fonts/ppmori.woff2') format('woff2');
-  font-weight: normal;
+  src: url('/fonts/PPMori-Light.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PPMori';
+  src: url('/fonts/PPMori-Extralight.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PPMori';
+  src: url('/fonts/PPMori-Regular.otf') format('opentype');
+  font-weight: 500;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'PPMori';
-  src: url('/fonts/ppmori.woff2') format('woff2');
-  font-weight: light;
-  font-style: normal;
-}
+
+
 .custom-cursor {
   cursor: url('https://cms.acolyte.ws/app/uploads/2024/09/ic-bromont-v1-240x240.jpg.webp'), auto ; /* 16 16 ajuste le point d'ancrage si nécessaire */
 }
@@ -32,5 +42,38 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+
+
+
+
+
+.underlined{
+  position: relative;
+}
+.underlined::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #000;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underlined:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+
+  .grouped:hover a.underlined::before {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
 }
 

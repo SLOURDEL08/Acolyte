@@ -9,16 +9,16 @@
       src="/svg/logo.svg" 
       :style="{ width: `${logoWidth}px`, height: '55px' }" 
       class="object-cover object-left transition-all duration-300 ease-in-out "
-    /></div>
+    /></div> 
    
-    <ul class="flex justify-between w-full font-light">
-      <li><a href="#" class="text-gray-700">AGENCE</a></li>
-      <li><a href="#" class="text-gray-700">APROCHE</a></li>
-      <li><a href="#" class="text-gray-700">EXPERTISE</a></li>
-      <li><a href="#" class="text-gray-700">PROJETS</a></li>
-      <li><a href="#" class="text-gray-700">TALENTS</a></li>
-      <li><a href="#" class="text-gray-700">CARRIERES</a></li>
-      <li><a href="#" class="text-gray-700">CONTACT</a></li>
+    <ul class="flex justify-between w-full font-[500]">
+      <li><a href="#" class="text-gray-700 underlined pb-1">AGENCE</a></li>
+      <li><a href="#" class="text-gray-700 underlined pb-1">APROCHE</a></li>
+      <li class="flex gap-3 group items-center "><a href="#" class="text-gray-700 underlined ">EXPERTISE</a><a class="group-hover:rotate-180 transition-all duration-500">+</a></li>
+      <li><a href="#" class="text-gray-700 underlined pb-1">PROJETS</a></li>
+      <li><a href="#" class="text-gray-700 underlined pb-1">TALENTS</a></li>
+      <li><a href="#" class="text-gray-700 underlined pb-1">CARRIERES</a></li>
+      <li><a href="#" class="text-gray-700 underlined pb-1">CONTACT</a></li>
     </ul>
   </nav>
 </template>

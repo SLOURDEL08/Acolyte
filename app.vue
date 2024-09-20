@@ -2,7 +2,7 @@
   <div>
     <Navbar /> <!-- Apparaît sur toutes les pages -->
     <NuxtPage /> <!-- L'élément clé, c'est ici que les pages sont rendues -->
- 
+    <Footer />
   </div>
 </template>
 
