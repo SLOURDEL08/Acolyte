@@ -1,5 +1,5 @@
 <template>
-  <div ref="contentSection" class="content-section relative pt-80 bg-[#f6f3f0]  px-[25px]">
+  <div ref="contentSection" class="content-section relative z-20 pt-80 bg-[#f6f3f0]  px-[25px]">
     <div ref="textElement" class="text font-light uppercase text-8xl relative opacity-0">
       <p class="font-[500]">
         La plus grande agence marketing entre Montréal et Québec

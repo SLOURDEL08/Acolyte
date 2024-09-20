@@ -1,20 +1,15 @@
 <template>
-  <div>
-    <Navbar /> <!-- Apparaît sur toutes les pages -->
-    <NuxtPage /> <!-- L'élément clé, c'est ici que les pages sont rendues -->
+  <div class="flex flex-col min-h-screen">
+    <Navbar />
+    <main class="flex-grow">
+      <NuxtPage />
+    </main>
     <Footer />
   </div>
 </template>
 
 <script setup>
 import Navbar from '~/components/Navbar.vue'
+import Footer from '~/components/Footer.vue'
 import '~/assets/css/tailwind.css'
 </script>
-
-<style scoped>
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f1f1f1;
-}
-</style>
