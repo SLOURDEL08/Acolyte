@@ -48,7 +48,9 @@ html {
 
 
 
-
+.rot{
+  transform:rotate(90deg)!important
+}
 .underlined{
   position: relative;
 }

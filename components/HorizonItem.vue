@@ -1,11 +1,11 @@
 <template>
   <div
-    class="w-[75%] relative group py-20 border-b pr-20 border-black cursor-none"
+    class="w-[75%] relative group py-20 pr-20 cursor-none"
     @mousemove="handleMouseMove"
     @mouseleave="handleMouseLeave"
     ref="hoverContainer"
   >
-    <span class="text-4xl font-[500]">{{ text }}</span>
+    <span class="text-[40px] font-[500] leading-tight">{{ text }}</span>
     <img
       :src="imgHover"
       :style="{ left: imageX + 'px', top: imageY + 'px', opacity: imageVisible ? 1 : 0 }"

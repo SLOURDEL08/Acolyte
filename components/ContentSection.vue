@@ -6,14 +6,14 @@
       </p>
     </div>
     
-    <div class="body-content space-y-4">
+    <div class="body-content relative space-y-4">
       <img src="/img/talent_home.jpg" class="rounded-2xl h-full relative" />
-      <div class="w-[70%]">
+      <div class="w-[70%] ">
         <span class="w-full font-[500] leading-based text-[45px]">
           Acolyte est une fière agence marketing employant une quarantaine de talents et implantée à Trois‑Rivières depuis plusieurs décennies. Chaque jour, on remue ciel et terre pour transformer des entreprises en marques comme si c'était les nôtres. On incarne la co‑création pour accompagner nos partenaires dans leurs démarches stratégiques, créatives et numériques.
         </span>
       </div>
-      <img src="/svg/trois-riviere.svg" class="absolute w-50 h-14 top-[1210px] rotate-12 right-20" />
+      <img src="/svg/trois-riviere.svg" class="absolute w-52 h-14 top-[620px] rotate-12 right-20" />
     </div>
     <ExpertiseSection />
     <ProjectsSection />

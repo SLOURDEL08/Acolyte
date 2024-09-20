@@ -1,9 +1,11 @@
 <template>
-    <div class="mt-40 bg-[#f6f3f0] !z-50 rounded-3xl -mx-[25px] p-6">
-         <div class="space-y-4 relative">
-        <span class="text-7xl font-[500] uppercase">l'horizon</span>
-        <p class="uppercase font-[500] text-xl">Longue vue sur nos projets à venir</p>
-        <img class="w-40 absolute top-36 left-20 -rotate-12" src="/svg/encour.svg" />
+    <div class="mt-40 bg-[#f6f3f0] !z-50 rounded-3xl -mx-[25px]  p-6">
+         <div class="space-y-4 relative ">
+<span class="text-7xl font-[600] tracking-tight uppercase">l
+  <span class="inline-block rotate-12 font-[600] absolute left-8 top-0">'</span>
+  horizon
+</span>        <p class="uppercase font-[500] text-[22px]">Longue vue sur nos projets à venir</p>
+        <img class="w-40 absolute top-36 left-24 -rotate-6" src="/svg/encour.svg" />
       </div>
         <div class="mt-20 flex flex-col items-end w-full h-[160vh]">
     
@@ -11,12 +13,14 @@
     <HorizonItem 
       text="Une campagne quatre saisons pour ceux et celles qui aiment jouer dehors à l’année."
       imgHover="/img/hover1.webp"
+      class="border-b border-black"
     />
 
     <!-- Deuxième item -->
     <HorizonItem 
       text="Accompagner une marque chouchou avec un logo qui a du chien à se positionner sur les médias sociaux."
       imgHover="/img/hover2.webp"
+      class="border-b border-black"
     />
 
     <!-- Troisième item -->

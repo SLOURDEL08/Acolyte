@@ -12,13 +12,13 @@
     /></div> 
    
     <ul class="flex justify-between w-full font-[500]">
-      <li><a href="#" class="text-gray-700 underlined pb-1">AGENCE</a></li>
-      <li><a href="#" class="text-gray-700 underlined pb-1">APROCHE</a></li>
+      <li><a href="#" class="text-black/70 underlined pb-1">AGENCE</a></li>
+      <li><a href="#" class="text-black/70 underlined pb-1">APROCHE</a></li>
       <li class="flex gap-3 group items-center "><a href="#" class="text-gray-700 underlined ">EXPERTISE</a><a class="group-hover:rotate-180 transition-all duration-500">+</a></li>
-      <li><a href="#" class="text-gray-700 underlined pb-1">PROJETS</a></li>
-      <li><a href="#" class="text-gray-700 underlined pb-1">TALENTS</a></li>
-      <li><a href="#" class="text-gray-700 underlined pb-1">CARRIERES</a></li>
-      <li><a href="#" class="text-gray-700 underlined pb-1">CONTACT</a></li>
+      <li><a href="#" class="text-black/70 underlined pb-1">PROJETS</a></li>
+      <li><a href="#" class="text-black/70 underlined pb-1">TALENTS</a></li>
+      <li><a href="#" class="text-black/70 underlined pb-1">CARRIERES</a></li>
+      <li><a href="#" class="text-black/70 underlined pb-1">CONTACT</a></li>
     </ul>
   </nav>
 </template>

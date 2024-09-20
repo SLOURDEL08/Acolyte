@@ -1,13 +1,13 @@
 <template>
-  <div class="flex grouped  flex-col gap-2 w-[25%]">
+  <div class="flex grouped cursor-pointer flex-col gap-2 w-[25%]">
     <img :src="image" class="rounded-2xl" />
-    <div class="space-y-4 mt-2 min-h-40">
-        <span class="text-3xl font-light">{{ title }}</span>
-    <p class="text-sm font-light">{{ description }}</p>
+    <div class="space-y-4 mt-4 min-h-40">
+        <span class="text-[29px]  font-[500]">{{ title }}</span>
+    <p class="text-[15px] font-[]">{{ description }}</p>
     </div>
   
     <div class="flex gap-2 items-center">
-      <a href="#" class="text-lg font-light  underlined">Découvrir</a>
+      <a href="#" class="text-xl font-[500]  underlined">Découvrir</a>
       <img src="/svg/arrow-right.svg"  class="w-4"/>
     </div>
   </div>

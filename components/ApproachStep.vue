@@ -6,7 +6,7 @@
 
     <img src="/img/arrow.svg" class="invert w-12 transition-all duration-700 group-hover:opacity-100 opacity-0">
   </div>
-    <p class="text-xl w-[70%] uppercase">{{ description }}</p>
+    <p class="text-lg w-[70%] uppercase">{{ description }}</p>
   </div>
   
     </div>  
