@@ -14,7 +14,7 @@
           :description="step.description"
         />
         <button class="p-2.5 uppercase text-sm px-6 hover:bg-transparent hover:text-black hover:border-black hover:font-[500] transition-all duration-500 border text-white bg-black rounded-full">
-          Notre approchee vue de plus proche
+          Notre approche vue de plus proche
         </button>
       </div>
     </div>

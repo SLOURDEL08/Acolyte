@@ -17,5 +17,6 @@ import ContentSection from '~/components/ContentSection.vue';
   height: max-content;
   min-height: 100vh;
   border-radius: 00px 00px 50px 50px;
+  overflow-y: auto;
 }
 </style>
