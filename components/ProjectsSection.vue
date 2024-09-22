@@ -19,7 +19,7 @@
         />
       </div>
       <div class="flex gap-4 mt-4 mb-2 group-hover:gap-6 transition-all duration-500 items-center">
-      <span class="text-2xl font-light uppercase">GIACOMO</span>
+      <span class="text-2xl font-[500] uppercase">GIACOMO</span>
         <img src="/svg/arrow-right.svg" class="w-6"/>
       </div>
       <p class=" font-light text-xl">Élever une marque à la hauteur de la qualité de ses produits pour en faire une réelle source d’émerveillement.</p>

@@ -1,16 +1,16 @@
 <template>
-  <div ref="contentSection" class="content-section relative z-20 pt-80 max-lg:pt-[30em] max-md:pt-40 paded bg-[#f6f3f0]  px-[25px]">
-    <div ref="textElement" class="text font-light uppercase text-8xl relative opacity-0">
-      <p class="font-[500] max-lg:text-4xl titled ">
-        La plus grande agence marketing entre Montréal et Québec
-      </p>
-    </div>
+  <div ref="contentSection" class="content-section relative z-20  max-lg:pt-[30em] max-md:pt-40 paded bg-[#f6f3f0]  px-[25px]">
+   
     
     <div class="body-content  space-y-4">
       <div class="relative w-full">
-              <img src="/img/talent_home.jpg" class="rounded-2xl h-full imgtalent w-full " />
-      <img src="/svg/trois-riviere.svg" class="absolute w-52 h-14 right- -bottom-10 rotate-12 right-20" />
-
+         <div ref="textElement" class="text font-light uppercase bottom-0  z-10  pt-80 max-lg:pt-40 opacity-0 ">
+      <p class="font-[500] titled  top-0 max-lg:bottom-60 text-8xl fixe">
+        La plus grande agence marketing entre Montréal et Québec
+      </p>
+    </div>
+        <img ref="imageElement" src="/img/talent_home.jpg" class="rounded-2xl relative z-50 h-full imgtalent w-full" />
+        <img src="/svg/trois-riviere.svg" class="absolute w-52 h-14 right- -bottom-10 rotate-12 right-20" />
       </div>
       <div class="w-[75%] ">
         <span class="w-full font-[500] leading-based text-[45px]">
@@ -22,7 +22,6 @@
     <ProjectsSection />
     <ApproachSection />
     <HorizonSection />
-    
   </div>
 </template>
 
@@ -30,10 +29,7 @@
 import { useGsapAnimations } from '~/composables/useGsapAnimation';
 import ExpertiseSection from './ExpertiseSection.vue';
 
-const { contentSection, textElement } = useGsapAnimations();
-
-
-
+const { contentSection, textElement, imageElement } = useGsapAnimations();
 </script>
 
 <style scoped>
@@ -61,7 +57,7 @@ const { contentSection, textElement } = useGsapAnimations();
 }
 
 .titled{
-  font-size:50px
+  font-size:60px;
 }
 
 }
@@ -69,7 +65,7 @@ const { contentSection, textElement } = useGsapAnimations();
 @media screen and (max-width: 770px){
 
   .titled{
-  font-size:30px
+  font-size:40px;
 }
 
 .paded{
