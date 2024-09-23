@@ -5,28 +5,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
-import { useNuxtApp } from '#app';
 
-onMounted(() => {
-  const { $gsap } = useNuxtApp();
-  if ($gsap) {
-    $gsap.fromTo(
-      '.image',
-      { y: 0 },
-      {
-        y: -1000,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.scroll-container',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true,
-        }
-      }
-    );
-  }
-});
 </script>
 
 <style scoped>

@@ -17,13 +17,14 @@ export function useGsapAnimations() {
         '.image',
         { y: 0 },
         {
-          y: -1000,
+          y: -5000,
           ease: 'none',
           scrollTrigger: {
             trigger: '.scroll-container',
             start: 'top top',
             end: 'bottom top',
             scrub: true,
+            markers: true,
           }
         }
       );
@@ -40,6 +41,7 @@ export function useGsapAnimations() {
             start: 'top top',
             end: '+=400 top',
             scrub: true,
+            markers:true,
             onUpdate: (self) => {
               if (self.progress >= 1) {
                 contentSection.value.style.position = 'relative';
@@ -53,16 +55,7 @@ export function useGsapAnimations() {
         }
       );
 
- const fadeOutAnimation = $gsap.to(textElement.value, {
-      opacity: 0,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.text',
-        start: 'bottom top', // Commence 500px après le début du défilement
-        end: '+=0', // Durée de l'animation de disparition
-        scrub: true
-      }
-    })
+
 
 // Nouvelle animation indépendante pour fixer ".text" en top-0 avec pin
       pinAnimation = $gsap.to(".text", {
@@ -73,7 +66,7 @@ export function useGsapAnimations() {
           pin: true,         // Active le "pin" pour fixer l'élément
           pinSpacing: false, // Désactive le padding supplémentaire
           toggleActions: "play none none none",  // Que faire aux différents points (entrer, quitter, etc.)
-          markers: false     // Mettre à true si tu veux voir les marqueurs pour le debug
+          markers: true     // Mettre à true si tu veux voir les marqueurs pour le debug
         },
         top: 0,  // Fixer au top
         position: "fixed", // Met en position fixed
@@ -102,5 +95,4 @@ export function useGsapAnimations() {
     textElement,
   };
 }
-
 

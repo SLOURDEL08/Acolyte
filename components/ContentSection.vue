@@ -1,10 +1,10 @@
 <template>
-  <div ref="contentSection" class="content-section relative z-20  max-lg:pt-[30em] max-md:pt-40 paded bg-[#f6f3f0]  px-[25px]">
-   
+  <div ref="contentSection" class="content-section relative z-20  paded bg-[#f6f3f0]  px-[25px]">
+   <ImageScroll/>
     
     <div class="body-content  space-y-4">
       <div class="relative w-full">
-         <div ref="textElement" class="text font-light uppercase bottom-0  z-10  pt-80 max-lg:pt-40 opacity-0 ">
+         <div ref="textElement" class="text font-light uppercase  pt-80 z-10   opacity-0 ">
       <p class="font-[500] titled  top-0 max-lg:bottom-60 text-8xl fixe">
         La plus grande agence marketing entre Montréal et Québec
       </p>
@@ -60,6 +60,8 @@ const { contentSection, textElement, imageElement } = useGsapAnimations();
   font-size:60px;
 }
 
+
+
 }
 
 @media screen and (max-width: 770px){
@@ -71,6 +73,11 @@ const { contentSection, textElement, imageElement } = useGsapAnimations();
 .paded{
   padding-top:350px
 }
+
+.text{
+  padding-top:50px;
+}
+
 }
 
 @media screen and (max-width: 400px){

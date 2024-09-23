@@ -1,6 +1,6 @@
 <template>
   <nav 
-    class="flex fixed justify-between z-[100] gap-40 items-center w-full p-10 py-6 transition-transform duration-300 ease-in-out"
+    class="flex fixed naved justify-between z-[100] gap-40 items-center w-full p-10 py-6 transition-transform duration-300 ease-in-out"
     :class="{ '-translate-y-full': isHidden, 'translate-y-0': !isHidden }"
     ref="navbar"
   >
@@ -155,6 +155,14 @@ img {
   height: 1.5px;
   background-color: #fff;
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media screen and (max-width: 900px){
+
+.naved{
+  gap:10px
+}
+
 }
 
 @media (hover: hover) and (pointer: fine) {

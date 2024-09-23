@@ -1,6 +1,5 @@
 <template>
   <div class="scroll-container">
-    <ImageScroll />
     <ContentSection />
   </div>
 </template>
