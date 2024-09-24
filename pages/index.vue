@@ -1,7 +1,7 @@
 <template>
   <div class=" bg-[#F6F3F0] overflow-x-hidden relative p-6 max-md:p-2.5 z-0 w-full min-h-screen " ref="contentSection">
     <img src="/public/svg/logo-big.svg" class=" w-[60%] absolute max-[1000px]:hidden left-1/2 -translate-x-1/2 max-[1000px]:top-0 top-60" ref="image" />
-      <p class="font-[600] titled text-8xl uppercase fixe mb-4 h-screen flex items-end -mt-40 max-[1000px]:-mt-80 max-sm:-mt-[36rem] max-lg:text-5xl max-sm:text-[35px] tracking-tighter   !leading-10 bottom-0 opacity-0 max-[1000px]:opacity-100" ref="textElement">
+      <p class="font-[600] titled text-8xl uppercase fixe mb-4 h-screen flex items-end -mt-40 max-md:mt-0 max-[1000px]:-mt-80 max-sm:-mt-[36rem] max-lg:text-5xl max-sm:text-[35px] tracking-tighter   !leading-10 bottom-0 opacity-0 max-[1000px]:opacity-100" ref="textElement">
         La plus grande agence marketing entre Montréal et Québec
       </p>
     <div class="js-pin-after relative bg-[#F6F3F0]" ref="bodyC">
