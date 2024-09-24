@@ -3,10 +3,10 @@
     <div class="relative overflow-hidden rounded-2xl">
       <img 
         :src="image" 
-        class="rounded-2xl object-cover w-full h-[85vh] max-md:h-[300px]  transition-transform duration-500 hover:scale-110" 
+        class="rounded-2xl object-cover w-full h-[80vh] max-lg:h-[40vh] max-md:h-[300px]  transition-transform duration-500 hover:scale-110" 
       />
     </div>
-    <div class="flex gap-4 mt-4 mb-2 items-center transition-all duration-500 group-hover:gap-6">
+    <div class="flex gap-4 mt-4 mb-2 items-center max-md:justify-between transition-all duration-500 group-hover:gap-6">
       <span class="text-2xl font-[500] uppercase">{{ title }}</span>
       <img src="/svg/arrow-right.svg" class="w-5"/>
     </div>

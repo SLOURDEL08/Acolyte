@@ -15,10 +15,10 @@
       <div class="relative overflow-hidden rounded-2xl">
         <img 
           src="/img/giacomo.webp" 
-          class="rounded-2xl object-cover w-full h-[80vh] max-md:h-[300px] transition-transform duration-500 hover:scale-110" 
+          class="rounded-2xl object-cover w-full h-[80vh] max-lg:h-[40vh] max-md:h-[300px] transition-transform duration-500 hover:scale-110" 
         />
       </div>
-      <div class="flex gap-4 mt-4 mb-2 group-hover:gap-6 transition-all duration-500 items-center">
+      <div class="flex gap-4 mt-4 mb-2 group-hover:gap-6 max-md:justify-between transition-all duration-500 items-center">
       <span class="text-2xl font-[500] uppercase">GIACOMO</span>
         <img src="/svg/arrow-right.svg" class="w-6"/>
       </div>
