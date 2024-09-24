@@ -1,91 +1,107 @@
 <template>
- 
- <div class="scroll-container  pt-80 ">
-  <div class="js-pin-container  relative h-80 flex items-end p-10">
-    <div class="image-scroll absolute -top-1/2" >    <img src="/public/svg/logo-big.svg" class="image   " />
-</div>
-    <div class="text"> <p class="font-[500] titled pt-80  text-8xl fixe">
+  <div class=" bg-[#F6F3F0] overflow-x-hidden relative p-6 z-0 w-full min-h-screen " ref="contentSection">
+    <img src="/public/svg/logo-big.svg" class=" w-[60%] absolute left-1/2 -translate-x-1/2 top-60" ref="image" />
+      <p class="font-[500] titled text-8xl fixe h-screen flex items-end -mt-40 max-lg:text-6xl bottom-0 opacity-0" ref="textElement">
         La plus grande agence marketing entre Montréal et Québec
-      </p></div>
-  </div>
-  <div class="js-pin-after p-10">
-     <div class="relative w-full">
-
-        <img ref="imageElement" src="/img/talent_home.jpg" class="rounded-2xl relative z-50 h-full imgtalent w-full" />
-        <img src="/svg/trois-riviere.svg" class="absolute w-52 h-14 right- -bottom-10 rotate-12 right-20" />
+      </p>
+    <div class="js-pin-after relative bg-[#F6F3F0]" ref="bodyC">
+      <div class="relative w-full">
+        <img  src="/img/talent_home.jpg" class="rounded-2xl  z-40 h-full imgtalent w-full" />
+        <img src="/svg/trois-riviere.svg" class="absolute w-52 h-14 right-20 -bottom-10 z-50 rotate-12" />
       </div>
-      <div class="w-[75%] ">
-        <span class="w-full font-[500] leading-based text-[45px]">
+      <div class="w-[75%] para ">
+        <span class="w-full font-[500] leading-based para text-[45px]">
           Acolyte est une fière agence marketing employant une quarantaine de talents et implantée à Trois‑Rivières depuis plusieurs décennies. Chaque jour, on remue ciel et terre pour transformer des entreprises en marques comme si c'était les nôtres. On incarne la co‑création pour accompagner nos partenaires dans leurs démarches stratégiques, créatives et numériques.
         </span>
       </div>
+     <ContentSection/>
+    </div>
+    
   </div>
-</div>
- </template>
- 
+</template>
+
 
 <script setup>
-import { useGsapAnimations } from '~/composables/useGsapAnimations';
+import ContentSection from './components/ContentSection.vue';
 
-const { contentSection, textElement, imageElement } = useGsapAnimations();
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { useNuxtApp } from '#app';
+
+const { $gsap } = useNuxtApp();
+const contentSection = ref(null);
+const image = ref(null);
+const textElement = ref(null);
+const bodyC = ref(null);
+const secElement = ref(null);
+let pinAnimation = null;  // Nouvelle animation indépendante
+let scrollTrigger = null;
+
+const setupAnimations = () => {
+  if ($gsap) {
+    // Animation pour l'image
+    $gsap.fromTo(
+      image.value,
+      { y: 0 },
+      {
+        y: -1000,
+        ease: 'yes',
+        scrollTrigger: {
+          trigger: contentSection.value,
+          start: 'top top',
+          end:'300px',
+          marker: true,
+          scrub:true,
+          pin:true,
+        }
+      }
+    );
+
+    $gsap.fromTo(
+  bodyC.value,
+  { y: 0 },
+  {
+    y: -500, // Adaptez la valeur de défilement à la hauteur de bodyC
+    ease: 'none',
+    scrollTrigger: {
+      trigger: contentSection.value, // Utilisez contentSection comme déclencheur
+      start: 'top top', // Quand commencer l'animation
+      end: '+=200px', // Fin de l'animation quand bodyC atteint le bas
+      scrub: true,
+      markers: true, // Pour déboguer les marqueurs
+    }
+  }
+    );
+
+   // Animation pour le paragraphe avec gestion de l'opacité dans les deux sens
+scrollTrigger = $gsap.fromTo(
+  textElement.value,
+  { opacity: 0 },  // Initial opacity
+  {
+    opacity: 1,    // Final opacity
+    ease: 'none',  // Pas d'effet d'accélération pour un contrôle fluide
+    scrollTrigger: {
+      trigger: '.scroll-container',  // Élément déclencheur
+      start: 'top top',              // Début de l'animation
+      end: '+=400',                  // Durée de l'animation
+      scrub: true,                   // Synchronisation avec le scroll, marche dans les deux sens
+      markers: true                  // Utilisation des marqueurs pour le débogage
+    }
+  }
+);
+   
+  }
+};
+
+onMounted(() => {
+  setupAnimations();
+});
+
+onBeforeUnmount(() => {
+  // Nettoyer les animations si nécessaire
+  if (scrollTrigger) {
+    scrollTrigger.kill(); // Tuer l'animation si elle existe
+  }
+});
+
 </script>
 
-<style scoped>
-.scroll-container {
-  position: relative;
-  height: max-content;
-  min-height: 100vh;
-  border-radius: 00px 00px 50px 50px;
-  overflow-y: auto;
-}
-
-.content-section {
-  width: 100%;
-}
-
-.text {
-  opacity: 1;
-}
-.image{
-  width:80%;
-  margin: 0 auto;
-}
-
-
-.custom-cursor{
-    cursor: url("/homepage/public/img/interieur.webp"), auto !important;
-}
-.custom-cursor:hover{
-    cursor: url("/homepage/public/img/interieur.webp"), auto !important;
-}
-
-@media screen and (max-width: 1072px){
-
-.imgtalent{
-  height: 600px;
-  object-fit: cover;
-}
-
-.titled{
-  font-size:60px;
-}
-
-}
-
-@media screen and (max-width: 770px){
-
-  .titled{
-  font-size:40px;
-}
-
-}
-
-@media screen and (max-width: 400px){
-
-  .titled{
-  font-size:30px;
-  line-height: 1.2;
-}
-
-}
-</style>

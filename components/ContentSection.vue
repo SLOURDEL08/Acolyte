@@ -1,35 +1,13 @@
 <template>
-  <div ref="contentSection" class="content-section relative z-20  paded bg-[#f6f3f0]  px-[25px]">
-   <ImageScroll/>
-    
-    <div class="body-content  space-y-4">
-      <div class="relative w-full">
-         <div ref="textElement" class="text font-light uppercase  pt-80 z-10   opacity-0 ">
-      <p class="font-[500] titled  top-0 max-lg:bottom-60 text-8xl fixe">
-        La plus grande agence marketing entre Montréal et Québec
-      </p>
-    </div>
-        <img ref="imageElement" src="/img/talent_home.jpg" class="rounded-2xl relative z-50 h-full imgtalent w-full" />
-        <img src="/svg/trois-riviere.svg" class="absolute w-52 h-14 right- -bottom-10 rotate-12 right-20" />
-      </div>
-      <div class="w-[75%] ">
-        <span class="w-full font-[500] leading-based text-[45px]">
-          Acolyte est une fière agence marketing employant une quarantaine de talents et implantée à Trois‑Rivières depuis plusieurs décennies. Chaque jour, on remue ciel et terre pour transformer des entreprises en marques comme si c'était les nôtres. On incarne la co‑création pour accompagner nos partenaires dans leurs démarches stratégiques, créatives et numériques.
-        </span>
-      </div>
-    </div>
-    <ExpertiseSection />
+<div>   <ExpertiseSection />
     <ProjectsSection />
     <ApproachSection />
-    <HorizonSection />
-  </div>
+    <HorizonSection /></div>
+
 </template>
 
 <script setup>
-import { useGsapAnimations } from '~/composables/useGsapAnimations';
-import ExpertiseSection from './ExpertiseSection.vue';
 
-const { contentSection, textElement, imageElement } = useGsapAnimations();
 </script>
 
 <style scoped>

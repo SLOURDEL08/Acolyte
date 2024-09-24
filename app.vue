@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col min-h-screen">
-    <Navbar />
-    <main class="flex-grow">
-      <NuxtPage />
-    </main>
-    <Footer />
-  </div>
+<div class="grid grid-rows-[auto_1fr_auto] min-h-screen">
+  <Navbar />
+  <main class="flex-grow">
+    <NuxtPage />
+  </main>
+  <Footer />
+</div>
 </template>
 
 <script setup>

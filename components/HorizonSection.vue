@@ -7,7 +7,7 @@
 </span>        <p class="uppercase font-[500] text-[22px]">Longue vue sur nos projets à venir</p>
         <img class="w-40 absolute top-36 left-24 -rotate-6" src="/svg/encour.svg" />
       </div>
-        <div class="mt-20 flex flex-col items-end w-full h-[160vh]">
+        <div class="mt-20 flex flex-col items-end w-full ">
     
     <!-- Premier item -->
     <HorizonItem 
