@@ -70,25 +70,17 @@ const { contentSection, textElement, imageElement } = useGsapAnimations();
   font-size:40px;
 }
 
-.paded{
-  padding-top:350px
-}
 
-.text{
-  padding-top:50px;
-}
 
 }
 
 @media screen and (max-width: 400px){
 
   .titled{
-  font-size:25px;
+  font-size:20px;
   line-height: 1.2;
 }
 
-.paded{
-  padding-top:250px
-}
+
 }
 </style>
