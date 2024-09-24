@@ -17,8 +17,8 @@ export function useGsapAnimations() {
         '.image',
         { y: 0 },
         {
-          y: -5000,
-          ease: 'none',
+          y: -10000,
+          ease: 'yes',
           scrollTrigger: {
             trigger: '.scroll-container',
             start: 'top top',
@@ -37,7 +37,7 @@ export function useGsapAnimations() {
           opacity: 1,
           ease: 'none',
           scrollTrigger: {
-            trigger: '.scroll-container',
+            trigger: '.image-scroll',
             start: 'top top',
             end: '+=400 top',
             scrub: true,
@@ -45,7 +45,7 @@ export function useGsapAnimations() {
             onUpdate: (self) => {
               if (self.progress >= 1) {
                 contentSection.value.style.position = 'relative';
-                contentSection.value.style.top = '400px';
+                contentSection.value.style.top = '00px';
               } else {
                 contentSection.value.style.position = 'fixed';
                 contentSection.value.style.top = '0';

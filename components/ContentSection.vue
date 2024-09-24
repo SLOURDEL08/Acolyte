@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-import { useGsapAnimations } from '~/composables/useGsapAnimation';
+import { useGsapAnimations } from '~/composables/useGsapAnimations';
 import ExpertiseSection from './ExpertiseSection.vue';
 
 const { contentSection, textElement, imageElement } = useGsapAnimations();
