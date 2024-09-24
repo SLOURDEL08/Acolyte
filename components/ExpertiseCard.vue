@@ -1,5 +1,5 @@
 <template>
-  <div class="flex grouped cursor-pointer flex-col gap-2 max-md:w-[50%] w-[25%]">
+  <div class="flex grouped cursor-pointer flex-col gap-2 max-md:w-[400px] w-[25%]">
     <img :src="image" class="rounded-2xl" />
     <div class="space-y-4 mt-4 min-h-40">
         <span class="text-[29px]  font-[500]">{{ title }}</span>

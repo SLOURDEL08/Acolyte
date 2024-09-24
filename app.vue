@@ -1,4 +1,4 @@
-<template>
+<template data-scroll-container >
 <div>
   <Navbar />
     <NuxtPage />

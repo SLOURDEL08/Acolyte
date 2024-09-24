@@ -1,7 +1,7 @@
 <template>
-  <div class="mt-40">
-    <span class="text-7xl tracking-tight font-[600]">EXPERTISES</span>
-    <div class="flex max-md:flex-wrap gap-5 mt-4">
+  <div class="mt-40 max-md:mt-28">
+    <span class="text-7xl tracking-tight font-[600] max-md:text-3xl">EXPERTISES</span>
+    <div class="flex !max-md:overflow-x-auto max-md:w-[1000px] gap-5 mt-4">
       <ExpertiseCard 
         v-for="(expertise, index) in expertises" 
         :key="index"

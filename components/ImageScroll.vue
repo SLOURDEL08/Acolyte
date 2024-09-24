@@ -10,10 +10,23 @@
 
 <style scoped>
 .image-scroll {
-  width: 100%;
+  width: 900px;
+}
+
+@media screen and (max-width: 1072px){
+  .image-scroll {
+  width: 70%;
+
+
+}
+
+@media screen and (max-width: 400px){
+  .image-scroll{
+    top:200px
+  }
 }
 
 
 
-
+}
 </style>

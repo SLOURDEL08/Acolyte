@@ -1,11 +1,11 @@
 <template>
-    <div class="mt-40 bg-[#f6f3f0] !z-50 rounded-3xl -mx-[25px]  p-6">
+    <div class="mt-40 max-md:mt-28 bg-[#f6f3f0] !z-50 rounded-3xl -mx-[25px] pt-0  p-6">
          <div class="space-y-4 relative ">
-<span class="text-7xl font-[600] tracking-tight uppercase">l
-  <span class="inline-block rotate-12 font-[600] absolute left-8 top-0">'</span>
+<span class="text-7xl uppercase tracking-tight font-[600] max-md:text-3xl">l
+  <span class="inline-block rotate-12 max-md:left-3 font-[600] absolute left-8 top-0">'</span>
   horizon
-</span>        <p class="uppercase font-[500] text-[22px]">Longue vue sur nos projets à venir</p>
-        <img class="w-40 absolute top-36 left-24 -rotate-6" src="/svg/encour.svg" />
+</span>        <p class="uppercase font-[500] text-[22px] max-md:text-[18px]">Longue vue sur nos projets à venir</p>
+        <img class="w-40 absolute top-36 left-24 max-[1200px]:left-0 max-[1200px]:top-20 max-[1200px]:w-28 -rotate-6" src="/svg/encour.svg" />
       </div>
         <div class="mt-20 flex flex-col items-end w-full ">
     

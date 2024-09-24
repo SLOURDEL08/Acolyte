@@ -1,6 +1,6 @@
 <template>
   <nav 
-    class="flex fixed naved justify-between z-[100] gap-40 items-center w-full p-10 py-6 transition-transform duration-300 ease-in-out"
+    class="flex fixed naved justify-between max-md:p-3 z-[100] gap-40 items-center w-full p-10 py-6 transition-transform duration-300 ease-in-out"
     :class="{ '-translate-y-full': isHidden, 'translate-y-0': !isHidden }"
     ref="navbar"
   >

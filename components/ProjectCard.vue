@@ -3,7 +3,7 @@
     <div class="relative overflow-hidden rounded-2xl">
       <img 
         :src="image" 
-        class="rounded-2xl object-cover w-full h-[85vh]   transition-transform duration-500 hover:scale-110" 
+        class="rounded-2xl object-cover w-full h-[85vh] max-md:h-[300px]  transition-transform duration-500 hover:scale-110" 
       />
     </div>
     <div class="flex gap-4 mt-4 mb-2 items-center transition-all duration-500 group-hover:gap-6">

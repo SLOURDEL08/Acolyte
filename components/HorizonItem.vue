@@ -1,16 +1,20 @@
 <template>
   <div
-    class="w-[75%]  max-lg:w-full relative group py-20 pr-20 cursor-none"
+    class="w-[75%] max-[1200px]:flex max-[1200px]:gap-6  max-[1200px]:items-center max-lg:pr-10 max-md:pr-0 max-[1200px]:py-6  max-[1200px]:w-full relative group py-20 pr-20 cursor-none"
     @mousemove="handleMouseMove"
     @mouseleave="handleMouseLeave"
     ref="hoverContainer"
   >
-    <span class="text-[40px] max-lg:text-[20px] font-[500] leading-tight">{{ text }}</span>
+    <span class="text-[40px] max-lg:text-[20px] max-md:text-[18px] font-[500] leading-tight">{{ text }}</span>
     <img
       :src="imgHover"
       :style="{ left: imageX + 'px', top: imageY + 'px', opacity: imageVisible ? 1 : 0 }"
-      class="w-[250px] h-[250px] rounded-2xl absolute pointer-events-none"
+      class="w-[250px] h-[250px] max-[1200px]:hidden max-[1200px]:opacity-100 max-[1200px]:inset-0  rounded-2xl absolute pointer-events-none"
       ref="hoverImage"
+    />
+    <img
+      :src="imgHover"
+      class="w-[250px] h-[250px] max-[1200px]:min-w-[28vw] max-[1200px]:h-[auto]  max-[1200px]:sticky min-[1200px]:opacity-100  rounded-2xl absolute pointer-events-none"
     />
   </div>
 </template>
