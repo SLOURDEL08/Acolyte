@@ -1,9 +1,7 @@
 <template>
-<div class="grid grid-rows-[auto_1fr_auto] min-h-screen">
+<div>
   <Navbar />
-  <main class="flex-grow">
     <NuxtPage />
-  </main>
   <Footer />
 </div>
 </template>

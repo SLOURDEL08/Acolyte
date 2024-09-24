@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col group gap-2 w-[50%] ">
+  <div class="flex  max-lg:w-full flex-col group gap-2 w-[50%] ">
     <div class="relative overflow-hidden rounded-2xl">
       <img 
         :src="image" 

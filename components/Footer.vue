@@ -1,5 +1,5 @@
 <template>
-<footer class="w-full  z-50 !bg-[#0F0B08] -mt-80 !p-5 ">
+<footer class="w-full  z-50 !bg-[#0F0B08] !p-5 ">
     <img src="/img/logofoot.webp" class="w-[500px]  text-left " />
     <img src="/svg/pasleboulevard.svg" class="w-44 pt-24  top-0 rotate-6 ml-20 -mb-8" />
     <div class="w-full border-b border-white text-left mt-10">

@@ -1,7 +1,7 @@
 <template>
   <div class="mt-40">
     <p class="w-[40%] text-2xl mb-2 font-light uppercase">Notre approche précise et efficace assure le développement d’une marque intelligente et durable.</p>
-    <div class="flex gap-6">
+    <div class="flex  max-lg:flex-wrap gap-6">
       <div class="w-1/2 relative">
         <img src="/img/interieur.webp" class="rounded-2xl  w-full h-[600px] object-cover"/>
         <img class="absolute bottom-20 right-10 -rotate-12 w-40 h-auto" src="/svg/approche.svg" />

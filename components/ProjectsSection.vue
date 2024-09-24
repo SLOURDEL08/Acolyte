@@ -1,7 +1,7 @@
 <template>
   <div class="mt-40">
     <span class="text-7xl font-[600] tracking-tight	">PROJETS</span>
-    <div class="flex gap-4 mt-4 ">
+    <div class="flex  max-lg:flex-wrap gap-4 mt-4 ">
       <ProjectCard 
         v-for="(project, index) in projects" 
         :key="index"
