@@ -1,14 +1,14 @@
 <template>
   <nav 
-    class="flex fixed naved justify-between max-md:p-3 z-[100] gap-40 items-center w-full p-10 py-6 transition-transform duration-300 ease-in-out"
+    class="flex fixed naved justify-between max-md:p-3 z-[100] gap-40 items-center w-full p-12 py-7 transition-transform duration-300 ease-in-out"
     :class="{ '-translate-y-full': isHidden, 'translate-y-0': !isHidden }"
     ref="navbar"
   >
     <!-- Lier dynamiquement la largeur du logo à la propriété `logoWidth` -->
-    <div class="min-w-[200px]"> 
+    <div class="min-w-[220px]"> 
       <img 
         src="/svg/logo.svg" 
-        :style="{ width: `${logoWidth}px`, height: '55px' }" 
+        :style="{ width: `${logoWidth}px`, height: '70px' }" 
         class="object-cover object-left transition-all duration-300 ease-in-out"
       />
     </div> 
@@ -34,7 +34,7 @@
 
     <!-- Mobile Menu (overlay) -->
     <div 
-      class="fixed p-4 inset-0 h-screen bg-[#0d20d9] lg:hidden z-[999] flex flex-col items-start justify-start transition-all duration-500 ease-in-out"
+      class="fixed p-4 inset-0  h-screen overflow-y-hidden bg-[#0d20d9] lg:hidden z-[999] flex flex-col items-start justify-start transition-all duration-500 ease-in-out"
       :class="{
         'translate-y-0 opacity-100': isMobileMenuVisible,
         '-translate-y-full opacity-0': !isMobileMenuVisible
@@ -83,8 +83,8 @@ const navbar = ref(null);
 const isHidden = ref(false);
 const lastScrollTop = ref(0);
 const scrollThreshold = 400;
-const maxLogoWidth = 200; // Largeur max du logo en px
-const minLogoWidth = 30;  // Largeur min du logo en px
+const maxLogoWidth = 365; // Largeur max du logo en px
+const minLogoWidth = 40;  // Largeur min du logo en px
 const scrollRange = 200;  // Intervalle de scroll pour changer la taille
 
 // Contrôle de la visibilité du menu mobile

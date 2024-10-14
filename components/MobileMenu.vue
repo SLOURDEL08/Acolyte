@@ -1,7 +1,7 @@
 <template>
   <div 
     v-if="isVisible" 
-    class="fixed inset-0 z-[999] bg-white flex flex-col items-center justify-center transform transition-transform duration-500 ease-in-out"
+    class="fixed inset-0 z-[999] h-full bg-white flex flex-col items-center justify-center transform transition-transform duration-500 ease-in-out"
     :class="{ 'translate-y-0': isVisible, '-translate-y-full': !isVisible }"
   >
     <button class="absolute top-5 right-5" @click="closeMenu">X</button>

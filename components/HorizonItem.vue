@@ -14,7 +14,7 @@
     />
     <img
       :src="imgHover"
-      class="w-[250px] h-[250px] max-[1200px]:min-w-[28vw] max-[1200px]:h-[auto]  max-[1200px]:sticky min-[1200px]:opacity-100  rounded-2xl absolute pointer-events-none"
+      class="w-[250px] h-[250px] max-[1200px]:min-w-[28vw] max-[1200px]:h-[auto] min-[1200px]:hidden  max-[1200px]:sticky min-[1200px]:opacity-100  rounded-2xl absolute pointer-events-none"
     />
   </div>
 </template>
