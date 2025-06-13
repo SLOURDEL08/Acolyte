@@ -1,19 +1,19 @@
 <template>
   <div class=" bg-[#F6F3F0] overflow-hidden relative p-6 z-0 w-full min-h-screen " ref="contentSection">
     <img src="/public/svg/logo-big.svg" class=" w-[60%] absolute left-1/2 -translate-x-1/2 mb-80 top-60" ref="image" />
-    <div class="fixed h-screen top-0 ">
-       <p class="font-[600] titled text-8xl uppercase  h-screen flex items-end -mt-40 max-lg:text-6xl bottom-0 opacity-0" ref="textElement">
+    <div class="fixed h-screen  top-0 ">
+       <p class="font-[600] titled text-8xl uppercase max-md:text-4xl   h-screen flex items-end -mt-40 max-md:-mt-48 max-lg:mr-10 max-lg:text-6xl bottom-0 opacity-0" ref="textElement">
         La plus grande agence marketing entre Montréal et Québec
       </p>
     </div>
      
     <div class=" relative bg-[#F6F3F0] mt-[75vh]" ref="bodyC">
       <div class="relative w-full">
-        <img  src="/img/talent_home.jpg" class="rounded-2xl  z-40 h-full imgtalent w-full" />
+        <img  src="/img/talent_home.jpg" class="rounded-2xl max-md:h-80 object-cover z-40 h-full imgtalent w-full" />
         <img src="/svg/trois-riviere.svg" class="absolute w-52 h-14 right-20 -bottom-10 z-50 rotate-12" />
       </div>
-      <div class="w-[75%] para ">
-        <span class="w-full font-[500] leading-based para text-[45px]">
+      <div class="w-[75%] mt-10 para max-md:w-[95%] max-md:mt-10">
+        <span class="w-full font-[500] leading-based para max-md:text-3xl text-[45px]">
           Acolyte est une fière agence marketing employant une quarantaine de talents et implantée à Trois‑Rivières depuis plusieurs décennies. Chaque jour, on remue ciel et terre pour transformer des entreprises en marques comme si c'était les nôtres. On incarne la co‑création pour accompagner nos partenaires dans leurs démarches stratégiques, créatives et numériques.
         </span>
       </div>

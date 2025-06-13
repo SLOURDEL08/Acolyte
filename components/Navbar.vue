@@ -5,13 +5,16 @@
     ref="navbar"
   >
     <!-- Lier dynamiquement la largeur du logo à la propriété `logoWidth` -->
-    <div class="min-w-[220px]"> 
+     <div class=""> 
       <img 
         src="/svg/logo.svg" 
-        :style="{ width: `${logoWidth}px`, height: '70px' }" 
+        :style="{ 
+          width: `${isMobile ? mobileLogoWidth : logoWidth}px`, 
+          height: isMobile ? '50px' : '70px' 
+        }" 
         class="object-cover object-left transition-all duration-300 ease-in-out"
       />
-    </div> 
+    </div>
    
     <!-- Desktop menu -->
     <ul class="hidden lg:flex justify-between w-full font-[500]">
@@ -83,42 +86,61 @@ const navbar = ref(null);
 const isHidden = ref(false);
 const lastScrollTop = ref(0);
 const scrollThreshold = 400;
-const maxLogoWidth = 365; // Largeur max du logo en px
-const minLogoWidth = 40;  // Largeur min du logo en px
-const scrollRange = 200;  // Intervalle de scroll pour changer la taille
+const isMobile = ref(false);
 
-// Contrôle de la visibilité du menu mobile
-const isMobileMenuVisible = ref(false);
+// Dimensions pour desktop
+const maxLogoWidth = 365;
+const minLogoWidth = 40;
+const scrollRange = 200;
 
-// Crée une propriété `logoWidth` calculée en fonction du scroll
+// Dimensions pour mobile
+const mobileMaxLogoWidth = 220;
+const mobileMinLogoWidth = 28;
+const mobileScrollRange = 150;
+
+// Variables réactives pour les largeurs
 const logoWidth = ref(minLogoWidth);
+const mobileLogoWidth = ref(mobileMinLogoWidth);
 
-// Fonction pour gérer le défilement et ajuster la taille du logo
+// Détection du mobile
+const checkMobile = () => {
+  isMobile.value = window.innerWidth <= 768; // breakpoint md de Tailwind
+};
+
+// Fonction de scroll mise à jour
 const handleScroll = () => {
   const st = window.pageYOffset || document.documentElement.scrollTop;
   
-  // Gérer la barre de navigation (comme avant)
+  // Gestion de la navbar
   if (st > scrollThreshold) {
-    if (st > lastScrollTop.value) {
-      isHidden.value = true;
-    } else {
-      isHidden.value = false;
-    }
+    isHidden.value = st > lastScrollTop.value;
   } else {
     isHidden.value = false;
   }
   
   lastScrollTop.value = st <= 0 ? 0 : st;
 
-  // Calculer la nouvelle taille du logo en fonction du scroll
-  if (st < scrollRange) {
-    logoWidth.value = minLogoWidth + (st / scrollRange) * (maxLogoWidth - minLogoWidth);
+  // Calcul de la taille du logo selon le device
+  if (isMobile.value) {
+    if (st < mobileScrollRange) {
+      mobileLogoWidth.value = mobileMinLogoWidth + 
+        (st / mobileScrollRange) * (mobileMaxLogoWidth - mobileMinLogoWidth);
+    } else {
+      mobileLogoWidth.value = mobileMaxLogoWidth;
+    }
   } else {
-    logoWidth.value = maxLogoWidth;
+    if (st < scrollRange) {
+      logoWidth.value = minLogoWidth + 
+        (st / scrollRange) * (maxLogoWidth - minLogoWidth);
+    } else {
+      logoWidth.value = maxLogoWidth;
+    }
   }
 };
 
-// Gérer l'ouverture et la fermeture du menu mobile
+// Gestion du menu mobile (inchangé)
+const isMobileMenuVisible = ref(false);
+
 const toggleMobileMenu = () => {
   isMobileMenuVisible.value = !isMobileMenuVisible.value;
 };
@@ -128,11 +150,15 @@ const closeMobileMenu = () => {
 };
 
 onMounted(() => {
+  checkMobile();
   window.addEventListener('scroll', handleScroll);
+  window.addEventListener('resize', checkMobile);
+  handleScroll(); // Initial call
 });
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
+  window.removeEventListener('resize', checkMobile);
 });
 </script>
 

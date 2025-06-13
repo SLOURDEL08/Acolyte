@@ -1,7 +1,7 @@
 <template>
 <footer class="w-full  z-50 !bg-[#0F0B08] !p-5 ">
     <img src="/img/logofoot.webp" class="w-[500px]  text-left " />
-    <img src="/svg/pasleboulevard.svg" class="w-44 pt-24 max-md:w-34  top-0 rotate-6 ml-20 -mb-8" />
+    <img src="/svg/pasleboulevard.svg" class="w-44 pt-24 max-md:w-34 max-md:ml-0  top-0 rotate-6 ml-20 -mb-8" />
     <div class="w-full border-b max-md:border-none  border-white text-left mt-10">
         <div class="w-full max-md:block flex items-center justify-between mb-10">
 <div class="space-y-8 max-md:mb-10 max-md:border-b max-md:pb-10">
